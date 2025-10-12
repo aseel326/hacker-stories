@@ -1,0 +1,46 @@
+{
+  "name": "elite-chat-enterprise",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Enterprise Grade Real-time Chat Application",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsc",
+    "production": "NODE_ENV=production node dist/server.js",
+    "cluster": "node cluster.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.8.1",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "validator": "^13.9.0",
+    "compression": "^1.7.4",
+    "express-mongo-sanitize": "^2.2.0",
+    "hpp": "^0.2.3",
+    "uuid": "^9.0.0",
+    "express-session": "^1.17.3",
+    "cookie-parser": "^1.4.6",
+    "express-validator": "^7.0.1",
+    "winston": "^3.10.0",
+    "node-cache": "^5.1.2",
+    "redis": "^4.6.7",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.32.1",
+    "node-cron": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "nodemon": "^3.0.1"
+  }
+}
